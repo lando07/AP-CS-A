@@ -17,7 +17,7 @@ public class ChooseYourOwnAdventure {
             +
             "Good luck and Game Over";
     private static int currentScenario = 1;
-    private static int score = 0;
+    private static int score = 1;
     private static char ans;
 
     public static void main(String[] args) {
