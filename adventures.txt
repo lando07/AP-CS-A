@@ -3,8 +3,6 @@ Have fun, and who knows what path you could take...
 
 Press Enter to continue....
 
-What's your name? >>> 
-
 What do you choose? >>>
 
 Try again? >>> 
