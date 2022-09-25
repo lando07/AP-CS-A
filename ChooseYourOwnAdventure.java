@@ -31,13 +31,13 @@ public class ChooseYourOwnAdventure {
                 adventureStr[i] = fileString;
                 i++;
                 if (i == 21)
-                break;
+                    break;
                 fileString = fileScanner.useDelimiter(DELIMITER).next();// uses the 2 newlines found at the end of each
                 // room/string to isolate each part
             }
         } catch (FileNotFoundException f) {// safeguard in case file wasn't placed in right dir
-        out.println(
-            "Oops! Looks like our story file wasn't found, make sure it exists in the same dir as this class!");
+            out.println(
+                    "Oops! Looks like our story file wasn't found, make sure it exists in the same dir as this class!");
             out.println("More detailed output:\n" + f);
             // implement go to start call
         }
@@ -47,32 +47,32 @@ public class ChooseYourOwnAdventure {
         out.println(adventureStr[0] + DELIMITER + adventureStr[1]);
         console.nextLine();
         clear();
-        out.println(adventureStr[currentScenario + 4]);// scenario 1
-        out.println(adventureStr[3]);
+        out.println(adventureStr[currentScenario + 3]);// scenario 1
+        out.println(adventureStr[2]);
         ans = console.nextLine().toUpperCase().charAt(0);
         if (ans == 'T') {// scenario 2
             currentScenario = 2;
             score += roomScores[currentScenario - 1];
-            out.println(adventureStr[currentScenario + 4]);
-            out.println(adventureStr[3]);
+            out.println(adventureStr[currentScenario+3]);
+            out.println(adventureStr[2]);
             ans = console.nextLine().toUpperCase().charAt(0);
             if (ans == 'S') {// scenario 4
                 currentScenario = 4;
                 score += roomScores[currentScenario - 1];
-                out.println(adventureStr[currentScenario + 4]);
-                out.println(adventureStr[3]);
+                out.println(adventureStr[currentScenario+3]);
+                out.println(adventureStr[2]);
                 ans = console.nextLine().toUpperCase().charAt(0);
                 if (ans == 'T') {// scenario 8
                     currentScenario = 8;
                     score = roomScores[currentScenario - 1];
-                    out.println(adventureStr[currentScenario + 4]);
-                    out.println(adventureStr[4]);
+                    out.println(adventureStr[currentScenario+3]);
+                    out.println(adventureStr[3]);
                     // implement go back to beginning or stop
                 } else if (ans == 'D') {// scenario 9
                     currentScenario = 9;
                     score = roomScores[currentScenario - 1];
-                    out.println(adventureStr[currentScenario + 4]);
-                    out.println(adventureStr[4]);
+                    out.println(adventureStr[currentScenario+3]);
+                    out.println(adventureStr[3]);
                     // implement go back to beginning or stop
                 } else {
                     out.println(invalidChoice);
@@ -81,20 +81,20 @@ public class ChooseYourOwnAdventure {
             } else if (ans == 'K') {// scenario 5
                 currentScenario = 5;
                 score = roomScores[currentScenario - 1];
-                out.println(adventureStr[currentScenario + 4]);
-                out.println(adventureStr[3]);
+                out.println(adventureStr[currentScenario+3]);
+                out.println(adventureStr[2]);
                 ans = console.nextLine().toUpperCase().charAt(0);
                 if (ans == 'G') {// scenario 10
                     currentScenario = 10;
                     score = roomScores[currentScenario - 1];
-                    out.println(adventureStr[currentScenario + 4]);
-                    out.println(adventureStr[4]);
+                    out.println(adventureStr[currentScenario+3]);
+                    out.println(adventureStr[3]);
                     // implement go back to beginning or stop
                 } else if (ans == 'S') {// scenario 11
                     currentScenario = 11;
                     score = roomScores[currentScenario - 1];
-                    out.println(adventureStr[currentScenario + 4]);
-                    out.println(adventureStr[4]);
+                    out.println(adventureStr[currentScenario+3]);
+                    out.println(adventureStr[3]);
                     // implement go back to beginning or stop
                 } else {
                     out.println(invalidChoice);
@@ -106,51 +106,71 @@ public class ChooseYourOwnAdventure {
         } else if (ans == 'D') {// scenario 3
             currentScenario = 3;
             score += roomScores[currentScenario - 1];
-            out.println(adventureStr[currentScenario + 4]);
-            out.println(adventureStr[3]);
+            out.println(adventureStr[currentScenario+3]);
+            out.println(adventureStr[2]);
             ans = console.nextLine().toUpperCase().charAt(0);
             if (ans == 'I') {// scenario 7
                 currentScenario = 7;
                 score = roomScores[currentScenario - 1];
-                out.println(adventureStr[currentScenario + 4]);
-                out.println(adventureStr[3]);
+                out.println(adventureStr[currentScenario+3]);
+                out.print(adventureStr[2]);
                 ans = console.nextLine().toUpperCase().charAt(0);
                 if (ans == 'S') {// scenario 14
                     currentScenario = 14;
                     score = roomScores[currentScenario - 1];
-                    out.println(adventureStr[currentScenario + 4]);
-                    out.println(adventureStr[4]);
+                    out.println(adventureStr[currentScenario+3]);
+                    out.print(adventureStr[3]);
                     // implement go back to beginning or stop
                 } else if (ans == 'L') {// scenario 15
                     currentScenario = 15;
                     score = roomScores[currentScenario - 1];
-                    out.println(adventureStr[currentScenario + 4]);
+                    out.println(adventureStr[currentScenario+3]);
                     out.println(adventureStr[3]);
                     ans = console.nextLine().toUpperCase().charAt(0);
-                    if(ans == 'W'){//scenario 17
+                    if (ans == 'W') {// scenario 17
                         currentScenario = 17;
                         score = roomScores[currentScenario - 1];
-                        out.println(adventureStr[currentScenario +4]);
-                        out.println(adventureStr[4]);
-                        //implement go back to beginning or stop
-                    }
-                    else if(ans == 'T'){//scenario 16
+                        out.println(adventureStr[currentScenario+3]);
+                        out.println(adventureStr[3]);
+                        // implement go back to beginning or stop
+                    } else if (ans == 'T') {// scenario 16
                         currentScenario = 16;
                         score = roomScores[currentScenario - 1];
-                        out.println(adventureStr[currentScenario+4]);
-                        out.println(adventureStr[4]);
-                        //implement go back to beginning or stop
-                    }
-                    else{
+                        out.println(adventureStr[currentScenario+3]);
+                        out.println(adventureStr[3]);
+                        // implement go back to beginning or stop
+                    } else {
                         out.println(invalidChoice);
-                        //implement go back to beginning or stop
+                        // implement go back to beginning or stop
                     }
                 } else {
                     out.println(invalidChoice);
                     // implement go back to beginning or stop
                 }
             } else if (ans == 'T') {// scenario 6
-
+                currentScenario = 6;
+                score = roomScores[currentScenario-1];
+                out.println(adventureStr[currentScenario+3]);
+                out.print(adventureStr[2]);
+                ans = console.nextLine().toUpperCase().charAt(0);
+                if(ans == 'T'){//scenario 12
+                    currentScenario = 12;
+                    score = roomScores[currentScenario - 1];
+                    out.println(adventureStr[currentScenario+3]);
+                    out.print(adventureStr[3]);
+                    //implement go back to beginning or stop
+                }
+                else if(ans == 'D'){//scenario 13
+                    currentScenario = 13;
+                    score = roomScores[currentScenario - 1];
+                    out.println(adventureStr[currentScenario + 3]);
+                    out.println(adventureStr[3]);
+                    //implement go back to beginning or stop
+                }
+                else{
+                    out.println(invalidChoice);
+                    //implement go back to beginning or stop
+                }
             } else {
                 out.println(invalidChoice);
                 // implement go back to beginning or stop
