@@ -3,9 +3,7 @@ Have fun, and who knows what path you could take...
 
 Press Enter to continue....
 
-What do you choose? >>>
-
-Try again? >>> 
+What do you choose? >>> 
 
 You arrive at school, you head to your homeroom and see your friend, but at the same time,
 your friend calls you over. You have 2 descicions, either (T)alk to your friend, or (D)o your homework.
