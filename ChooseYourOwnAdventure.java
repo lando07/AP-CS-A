@@ -10,7 +10,7 @@ public class ChooseYourOwnAdventure {
     private static final String DELIMITER = "\n\n"; // in the adventure.txt file, I have all of them spaced by one line
     private static String[] adventureStr = new String[20]; // 22 total strings, including ones that aren't scenarios
     private static int[] roomScores = { 1, 1, 1, 3, 1, 2, 1, 1, 5, 1, 0, 1, 5, 4, 1, 1, 2 };// represents the point
-    // value of each room;
+    // value of each room
     // higher the value, the
     // better choice made
     private static String invalidChoice = "You didn't choose a valid choice, and the whole classroom corrupts. You glitch into the backrooms. "
